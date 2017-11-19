@@ -1,0 +1,152 @@
+{
+  // ==========================================================================================================================
+  // BASIC ES7 JS
+  "import": {
+    "prefix": "imp",
+    "body": "import $2 from '$1'"
+  },
+  "importNoModuleName": {
+    "prefix": "imn",
+    "body": "import '$1'"
+  },
+  "importDestructing": {
+    "prefix": "imd",
+    "body": "import { $2 } from '$1'"
+  },
+  "importEverything": {
+    "prefix": "ime",
+    "body": "import * as $2 from '$1'"
+  },
+  "importAs": {
+    "prefix": "ima",
+    "body": "import { $2 as $3 } from '$1'"
+  },
+  "exportNamedFunction": {
+    "prefix": "enf",
+    "body": [
+      "export const $1 = ($2) => {",
+      "  $0",
+      "}",
+      ""
+    ],
+    "description": "Export named function in ES7 syntax"
+  },
+  "method": {
+    "prefix": "met",
+    "body": [
+      "$1 = ($2) => {",
+      "  $0",
+      "}",
+      ""
+    ],
+    "description": "Creates a method inside a class in ES7 syntax"
+  },
+  "propertyGet": {
+    "prefix": "pge",
+    "body": [
+      "get $1 = () => {",
+      "  return this._$1",
+      "}",
+      ""
+    ],
+    "description": "Creates a getter property inside a class in ES7 syntax"
+  },
+  "propertyset": {
+    "prefix": "pse",
+    "body": [
+      "set $1 = ($1) => {",
+      "  this._$1 = $1",
+      "}",
+      ""
+    ],
+    "description": "Creates a setter property inside a class in ES7 syntax"
+  },
+  "forEach": {
+    "prefix": "fre",
+    "body": [
+      "$1.forEach(($2) => {",
+      "  $0",
+      "})"
+    ],
+    "description": "Creates a forEach statement in ES7 syntax"
+  },
+  "map": {
+    "prefix": "map",
+    "body": [
+      "$1.map(($2) => $0)"
+    ],
+    "description": "Creates a forEach statement in ES7 syntax"
+  },
+  "forOf": {
+    "prefix": "fof",
+    "body": [
+      "for(const $1 of $2) {",
+      "  $0",
+      "}",
+      ""
+    ],
+    "description": "Iterating over property names of iterable objects"
+  },
+  "forIn": {
+    "prefix": "fin",
+    "body": [
+      "for(const $1 in $2) {",
+      "  $0",
+      "}",
+      ""
+    ],
+    "description": "Iterating over property values of iterable objects"
+  },
+  "anonymousFunction": {
+    "prefix": "afn",
+    "body": [
+      "($1) => {$0}"
+    ],
+    "description": "Creates an anonymous function in ES7 syntax"
+  },
+  "namedFunction": {
+    "prefix": "nfn",
+    "body": [
+      "const $1 = ($2) => {",
+      "  $0",
+      "}",
+      ""
+    ],
+    "description": "Creates a named function in ES7 syntax"
+  },
+  "destructingObject": {
+    "prefix": "dob",
+    "body": "const { $1 } = $0",
+    "description": "Creates and assigns a local variable using object destructing"
+  },
+  "destructingArray": {
+    "prefix": "dar",
+    "body": "const [ $1 ] = $0",
+    "description": "Creates and assigns a local variable using array destructing"
+  },
+  "promise": {
+    "prefix": "prom",
+    "body": [
+      "return new Promise((resolve, reject) => {",
+      "  $0",
+      "})",
+      ""
+    ],
+    "description": "Creates and returns a new Promise in the standard ES7 syntax"
+  },
+  "consoleError": {
+    "prefix": "cer",
+    "body": "console.error('$1', error)",
+    "description": "Displays a message in the console and also includes a stack trace from where the method was called"
+  },
+  "consoleLog": {
+    "prefix": "clg",
+    "body": "console.log('$1')",
+    "description": "Displays a message in the console"
+  },
+  "consoleInfo": {
+    "prefix": "cin",
+    "body": "console.info('$1')",
+    "description": "Displays a message in the console but also displays a blue information icon along with the logged message"
+  }
+}

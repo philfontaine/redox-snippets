@@ -1,0 +1,17 @@
+{
+  "winstonError": {
+    "prefix": "wer",
+    "body": "winston.error('$1', error.toString())",
+    "description": "Displays a message in the console and also includes a stack trace from where the method was called"
+  },
+  "winstonLog": {
+    "prefix": "wlg",
+    "body": "winston.log('$1')",
+    "description": "Displays a message in the console"
+  },
+  "winstonInfo": {
+    "prefix": "win",
+    "body": "winston.info('$1')",
+    "description": "Displays a message in the console but also displays a blue information icon along with the logged message"
+  }
+}
